@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["InterVariable", "Inter"],
+        sans: ['Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
         brand: {

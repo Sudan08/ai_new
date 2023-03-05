@@ -1,8 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/ai.png";
 import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
 ---
 
 <main
@@ -12,8 +11,8 @@ import { Icon } from "astro-icon";
       src={heroImage}
       alt="Astronaut in the air"
       widths={[200, 400, 600]}
-      aspectRatio="4:3"
-      sizes="(max-width: 800px) 100vw, 620px"
+      aspectRatio="1:1"
+      sizes="(max-width: 800px) 100vw, 600px"
       loading="eager"
       format="avif"
     />
@@ -21,33 +20,22 @@ import { Icon } from "astro-icon";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      <span class="text-brand-500">Surrouding</span> and Gathering the
+      <br />
+      <span class="text-brand-600"> AI Enthusiasts</span>
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      A community lead by AI enthusiast and runned by multi-talented people.
+      Being AI Learners Community, we got amazing faces to make our community
+      grow!
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        href="/about-us"
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Download for Free
-      </Link>
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        Learn More
       </Link>
     </div>
   </div>
