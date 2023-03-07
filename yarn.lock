@@ -893,11 +893,6 @@ astro-navbar@^1.1.5:
   resolved "https://registry.yarnpkg.com/astro-navbar/-/astro-navbar-1.1.5.tgz#9f299c883fac3a650d86be2f01fb40a8b758c590"
   integrity sha512-sP1t16j+yTVoX0QYuzqt1jLSFe9suH71Z8p96ExsorZtVQ7G/xOT4SCBTw296Vu7OgQY/Cese8iwT7xHQ37p8g==
 
-astro-seo@^0.7.0:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.7.1.tgz#b1921ba94bc80319f091d3dbf93d9450f3fa5ffe"
-  integrity sha512-8Yo1nQrl2iB5zj+VUAHrvGIck8bZ4WAmXQgJOeF9FuAZGQD5qK6DtSZaRbpBXsFfZYHA6tE8pjs3btHhLbC1zQ==
-
 astro@^2.0.11:
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.17.tgz#889ec009c0a9732570bbe90b7707ec0941258692"

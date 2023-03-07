@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
@@ -7,52 +7,103 @@ import Sectionhead from "@components/sectionhead.astro";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
+  return !data.draft;
 });
+
+// putting team members based on year
+const membersByYear: { year: number; members: CollectionEntry<"team">[] }[] =
+  [];
+
+publishedTeamMembers.forEach((teamMemberEntry) => {
+  const year = new Date(teamMemberEntry.data.publishDate).getFullYear();
+  const yearEntry = membersByYear.find((entry) => entry.year === year);
+  if (yearEntry) {
+    yearEntry.members.push(teamMemberEntry);
+  } else {
+    membersByYear.push({
+      year,
+      members: [teamMemberEntry],
+    });
+  }
+});
+
+// sorting team members based on year
+membersByYear.sort((a, b) => b.year - a.year);
+
+console.log(membersByYear);
 ---
 
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Our Team</Fragment>
+      <Fragment slot="desc">
+        <p class="max-w-4xl mx-auto text-gray-700">
+          A community lead by AI enthusiast and runned by multi-talented people.
+          Being AI Learners Community, we got amazing faces to make our
+          community grow!
+        </p>
+      </Fragment>
     </Sectionhead>
-
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-bold text-3xl text-gray-700 mt-16 mb-4 text-center">
+        Mentor
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
+      <div class="flex flex-col items-center">
+        <div class="h-56 w-56 overflow-hidden rounded-full relative">
+          <img
+            src="/assets/mentor.png"
+            alt="Anmol Adhikari"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <h2 class="text-lg text-gray-800 mt-4 font-bold">Anmol Adhikari</h2>
+        <h3 class="text-sm text-slate-500">Mentor</h3>
+        <h3 class="text-sm text-slate-500">
+          Lecturer, Academic Mentor, Associate Module Leader, FYP Supervisor
+        </h3>
+      </div>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                widths={[200, 400]}
-                aspectRatio="1:1"
-                background="#ffffff"
-                fit="cover"
-                position="center"
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">
-                {teamMemberEntry.data.name}
-              </h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
+    <div class="mx-auto max-w-4xl">
+      <h2 class="font-bold text-3xl text-gray-700 mt-16">Core Members</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        We are thankful to all our contributors who have helped us in making
+        this community a better place to learn AI.
+      </p>
+      {
+        membersByYear.map((batch) => (
+          <div class="mt-6">
+            <h3 class="text-gray-700 font-semibold text-2xl mb-3">
+              Batch of {batch.year}
+            </h3>
+            <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl">
+              {batch.members.map((teamMemberEntry) => (
+                <div class="group">
+                  <div class="w-full aspect-square">
+                    <Picture
+                      src={teamMemberEntry.data.avatar.src}
+                      alt={teamMemberEntry.data.avatar.alt}
+                      sizes="(max-width: 800px) 100vw, 400px"
+                      widths={[200, 400]}
+                      aspectRatio="1:1"
+                      background="#ffffff"
+                      fit="cover"
+                      position="center"
+                      class="w-full rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                    />
+                  </div>
+
+                  <div class="mt-4 text-center">
+                    <h2 class="text-lg text-gray-800">
+                      {teamMemberEntry.data.name}
+                    </h2>
+                    <h3 class="text-sm text-slate-500">
+                      {teamMemberEntry.data.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         ))
