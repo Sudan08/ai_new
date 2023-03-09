@@ -16,7 +16,7 @@ const membersByYear: { year: number; members: CollectionEntry<"team">[] }[] =
   [];
 
 publishedTeamMembers.forEach((teamMemberEntry) => {
-  const year = new Date(teamMemberEntry.data.publishDate).getFullYear();
+  const year = teamMemberEntry.data.year;
   const yearEntry = membersByYear.find((entry) => entry.year === year);
   if (yearEntry) {
     yearEntry.members.push(teamMemberEntry);
