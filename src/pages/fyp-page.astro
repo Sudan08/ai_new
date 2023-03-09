@@ -1,0 +1,20 @@
+---
+import Container from "@components/container.astro";
+import Features from "@components/features.astro";
+import Fyp from "@components/events/fyp.astro";
+import Hero from "@components/hero.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Home">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"><span class="text-brand-500">FYP </span> Demonstration</Fragment>
+      <Fragment slot="desc">An event where Students learn the layout of <span class="text-brand-700 font-bold">Final Year Project.</span></Fragment>
+    </Sectionhead>
+    <div class="m-9">
+      <Fyp />
+    </div>
+  </Container>
+</Layout>
