@@ -1,0 +1,18 @@
+---
+import Container from "@components/container.astro";
+import Algo from "@components/events/algo.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Home">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"><span class="text-brand-500">Algo</span> Talks</Fragment>
+      <Fragment slot="desc">Platform to talk about exciting algorithms mostly related to <span class="text-brand-700 font-bold">Artificial Intelligence.</span></Fragment>
+    </Sectionhead>
+    <div class="m-9">
+      <Algo />
+    </div>
+  </Container>
+</Layout>
