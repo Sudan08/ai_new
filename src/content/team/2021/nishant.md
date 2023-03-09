@@ -2,7 +2,7 @@
 draft: false
 name: "Nishant Shrestha"
 title: "Frontend Developer"
-year: 2022
+year: 2021
 avatar: {
     src: "/members/nishant.jpg",
     alt: "Nishant Shrestha"
