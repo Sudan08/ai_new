@@ -4,33 +4,43 @@ import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import Algocard from "@components/algocard.astro";
 
-
-const details = [{
-  id:3,
-  title: "Algo Talks EP3",
-  desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
-  imageName : "algo_talk_v3"
-},{
-  id:2,
-  title : "Algo Talks EP2",
-  desc : "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
-  imageName : "algo_talk_v2"
-},{
-  id:1,
-  title : "Algo Talks EP1",
-  desc : "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
-  imageName : "algo_talk_v1"
-}];
+const details = [
+  {
+    id: 3,
+    title: "Algo Talks EP3",
+    desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
+    imageName: "algo_talk_v3",
+  },
+  {
+    id: 2,
+    title: "Algo Talks EP2",
+    desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
+    imageName: "algo_talk_v2",
+  },
+  {
+    id: 1,
+    title: "Algo Talks EP1",
+    desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
+    imageName: "algo_talk_v1",
+  },
+];
 ---
 
 <Layout title="Algo">
   <Container>
     <Sectionhead>
-      <Fragment slot="title"><span class="text-brand-500">Algo</span> Talks</Fragment>
-      <Fragment slot="desc">Platform to talk about exciting algorithms mostly related to <span class="text-brand-700 font-bold">Artificial Intelligence.</span></Fragment>
+      <Fragment slot="title">
+        <span class="text-brand-500">Algo</span> Talks
+      </Fragment>
+      <Fragment slot="desc">
+        Platform to talk about exciting algorithms mostly related to <span
+          class="text-brand-700 font-bold">Artificial Intelligence.</span
+        >
+      </Fragment>
     </Sectionhead>
-    <div class="my-9 w-full flex-col justify-around gap-9">
-    {details.map((item) => <Algocard details = {item} />)}
+    <div class="my-9 w-full flex flex-col justify-around gap-10">
+      {details.map((item, index) => <Algocard details={item} index={index} />)}
     </div>
   </Container>
 </Layout>
+

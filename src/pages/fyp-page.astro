@@ -7,26 +7,33 @@ import Layout from "@layouts/Layout.astro";
 <Layout title="Home">
   <Container>
     <Sectionhead>
-      <Fragment slot="title"><span class="text-brand-500">FYP </span> Demonstration</Fragment>
-      <Fragment slot="desc">An event where Students learn the layout of <span class="text-brand-700 font-bold">Final Year Project.</span></Fragment>
+      <Fragment slot="title">
+        <span class="text-brand-500">FYP</span> Demonstration
+      </Fragment>
+      <Fragment slot="desc">
+        An event where Students learn the layout of <span
+          class="text-brand-700 font-bold">Final Year Project.</span
+        >
+      </Fragment>
     </Sectionhead>
     <div class="m-9">
-      
-
-      <div class="flex lg:flex-row justify-around gap-9 md:flex-col-reverse sm:flex-col-reverse">
-        <div class="flex flex-col justify-center align-center">
-            <p class="text-lg text-black"> 
-            Final year project Demonstration where the graduates of the year 2020 showcased their projects to the Students.
-            </p>
+      <div
+        class="flex lg:flex-row justify-around gap-9 md:flex-col-reverse sm:flex-col-reverse">
+        <div class="flex flex-col justify-center align-center w-full">
+          <p class="text-lg text-black">
+            Final year project Demonstration where the graduates of the year
+            2020 showcased their projects to the Students.
+          </p>
         </div>
         <div>
-            <img
+          <img
             src="/events/herald_fyp.jpg"
             alt="FYP Demo"
-            class="w-full h-full object-cover rounded-md hover:-translate-y-3"
+            class="w-full h-full object-cover rounded-md hover:-translate-y-3 duration-300"
           />
         </div>
       </div>
     </div>
   </Container>
 </Layout>
+
