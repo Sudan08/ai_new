@@ -21,7 +21,7 @@ const { details, index } = Astro.props;
   </div>
   <div class="w-full flex justify-center aspect-square">
     <img
-      src={"/events/" + details.imageName + ".jpg"}
+      src={details.src}
       alt={details.title}
       class="w-full h-full object-cover rounded-md hover:-translate-y-3 duration-500"
     />

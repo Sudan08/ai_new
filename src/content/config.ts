@@ -18,6 +18,16 @@ const blogCollection = defineCollection({
   }),
 });
 
+const algoCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean(),
+    index:z.number(),
+    title: z.string(),
+    description: z.string(),
+    src: z.string(),
+  }),
+});  
+
 const teamCollection = defineCollection({
   schema: z.object({
     draft: z.boolean(),
