@@ -1,29 +1,25 @@
 ---
+import {getCollection } from "astro:content";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import Algocard from "@components/algocard.astro";
 
-const details = [
-  {
-    id: 3,
-    title: "Algo Talks EP3",
-    desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
-    imageName: "algo_talk_v3",
-  },
-  {
-    id: 2,
-    title: "Algo Talks EP2",
-    desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
-    imageName: "algo_talk_v2",
-  },
-  {
-    id: 1,
-    title: "Algo Talks EP1",
-    desc: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence.",
-    imageName: "algo_talk_v1",
-  },
-];
+const AlogDetails = await getCollection("event", ({data})=>{
+  return data;
+});
+
+const details = AlogDetails.map((item) => {
+  return {
+    id: item.data.index,
+    title: item.data.title,
+    description: item.data.description,
+    date:item.data.date,
+    src: item.data.src,
+  };
+});
+
+
 ---
 
 <Layout title="Algo">
@@ -44,3 +40,4 @@ const details = [
   </Container>
 </Layout>
 
+  

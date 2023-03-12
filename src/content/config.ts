@@ -24,6 +24,7 @@ const algoCollection = defineCollection({
     index:z.number(),
     title: z.string(),
     description: z.string(),
+    date : z.string(),
     src: z.string(),
   }),
 });  
@@ -46,5 +47,6 @@ const teamCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blog': blogCollection,
+  'event' : algoCollection,
   'team': teamCollection,
 };
