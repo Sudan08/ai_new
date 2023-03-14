@@ -5,11 +5,15 @@ import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import Algocard from "@components/algocard.astro";
 
-const AlogDetails = await getCollection("event", ({data})=>{
+const AlogDetails = await getCollection("algo", ({data})=>{
   return data;
 });
 
-const details = AlogDetails.map((item) => {
+const filterDate = AlogDetails.sort((a,b) => {
+  return Date.parse(b.data.date) - Date.parse(a.data.date);
+});
+
+const details = filterDate.map((item) => {
   return {
     id: item.data.index,
     title: item.data.title,

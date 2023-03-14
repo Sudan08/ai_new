@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import Eventcard from "@components/eventcard.astro";
+
+const EventDetails = await getCollection("event", ({ data }) => {
+  return data;
+});
+
+const filterDate = EventDetails.sort((a, b) => {
+  return new Date(b.data.date) - new Date(a.data.date);
+});
+
+const details = filterDate.map((detail) => {
+  return {
+    id: detail.data.index,
+    title: detail.data.title,
+    description: detail.data.description,
+    date: detail.data.date,
+    src: detail.data.src,
+  };
+});
+---
+
+<Layout title="Algo">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">
+        <span class="text-brand-500">Events</span>
+      </Fragment>
+      <Fragment slot="desc">
+        All our past events. <span class="text-brand-700 font-bold"></span>
+      </Fragment>
+    </Sectionhead>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 m-6">
+      {
+        details.map((item, index) => {
+          return <Eventcard key={index} details={item} />;
+        })
+      }
+    </div>
+  </Container>
+</Layout>
+

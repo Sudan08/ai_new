@@ -29,6 +29,19 @@ const algoCollection = defineCollection({
   }),
 });  
 
+
+const eventCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean(),
+    index:z.number(),
+    title: z.string(),
+    description: z.string(),
+    date : z.string(),
+    src: z.string(),
+  }),
+});
+
+
 const teamCollection = defineCollection({
   schema: z.object({
     draft: z.boolean(),
@@ -47,6 +60,7 @@ const teamCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blog': blogCollection,
-  'event' : algoCollection,
+  'algo' : algoCollection,
   'team': teamCollection,
+  'event': eventCollection,
 };
