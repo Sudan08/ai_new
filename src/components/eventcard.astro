@@ -1,0 +1,24 @@
+---
+import Link from "./ui/link.astro";
+
+const { details , key }  = Astro.props;
+
+
+
+---
+<div class="flex flex-col justconify-center align-center gap-5 max-w-md">
+    <div>
+        <img src={details.src} alt="event" class="w-full h-full object-cover rounded-md hover:-translate-y-3 duration-500" />
+    </div>
+    <div class="flex flex-col justify-around align-center gap-5">
+        <p class="text-4xl">{details.title}</p>
+        <p>{details.description}</p>
+        <div>
+            <Link href="#" size="md" class={"bg-brand-600 hover:bg-brand w-2/4"}>
+                Details
+              </Link>
+        </div>
+    </div>
+ 
+    
+</div>  
