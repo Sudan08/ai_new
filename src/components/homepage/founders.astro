@@ -1,6 +1,6 @@
 ---
 import { Props } from "astro";
-import TeamCard from "./TeamCard.astro";
+import TeamCard from "../TeamCard.astro";
 interface Founder {
   imageUrl: string;
   alt: string;
@@ -8,6 +8,12 @@ interface Founder {
   title: string;
 }
 const founders: Founder[] = [
+  {
+    imageUrl : "./assets/founders/prakash-shrestha.jpeg",
+    alt : "Prakash Shrestha",
+    name : "Prakash Shrestha",
+    title : "Founder / C.E.O",
+  },
   {
     imageUrl: "./assets/founders/shreejan.jpg",
     alt: "Shreejan Shrestha",
@@ -19,6 +25,12 @@ const founders: Founder[] = [
     alt: "Erin Shakya",
     name: "Erin Shakya",
     title: "Founder",
+  },
+  {
+    imageUrl : "./assets/founders/shristi-shakya.jpeg",
+    alt : "Shristi Shrestha",
+    name : "Shristi Shrestha",
+    title : "Founder",
   },
 ];
 ---
