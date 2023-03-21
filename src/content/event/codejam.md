@@ -1,8 +1,8 @@
 ---
 draft: false
-index : 1
-title : "Code Jam"
-description : "Lorem Uso Wal poaki oeth sogen eit shg otej sage j sote jdce ted egt dgge tqoj te jdf eds ispoe waku waku"
-date : "November 2, 2021"
-src: "/events/algo_talk_v3.jpg"
+index: 1
+title: "Code Jam"
+description: "Herald Codejam is a competition organized by AI Learners community where students will try solving mathematical and logical problems using programming language of their choice."
+date: "Dec 20, 2022"
+src: "/events/codejam.jpg"
 ---
