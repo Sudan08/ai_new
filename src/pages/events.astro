@@ -10,7 +10,7 @@ const EventDetails = await getCollection("event", ({ data }) => {
 });
 
 const filterDate = EventDetails.sort((a, b) => {
-  return new Date(b.data.date) - new Date(a.data.date);
+  return new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
 });
 
 const details = filterDate.map((detail) => {
@@ -20,6 +20,7 @@ const details = filterDate.map((detail) => {
     description: detail.data.description,
     date: detail.data.date,
     src: detail.data.src,
+    link: detail.data.link,
   };
 });
 ---
