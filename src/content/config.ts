@@ -38,6 +38,7 @@ const eventCollection = defineCollection({
     description: z.string(),
     date : z.string(),
     src: z.string(),
+    link : z.string(),
   }),
 });
 

@@ -1,6 +1,7 @@
 ---
 draft: false
 index: 1
+link : ""
 title: "Code Jam"
 description: "Herald Codejam is a competition organized by AI Learners community where students will try solving mathematical and logical problems using programming language of their choice."
 date: "Dec 20, 2022"
