@@ -3,9 +3,9 @@ import { Icon } from "astro-icon";
 
 ---
 
-<footer class="mt-20 mb-10 bg-footerImage">
+<footer class="mt-20 mb-10 bg-footerImage max-w-screen-xl mx-auto px-5">
   <div
-    class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+    class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between ">
     <div class="mr-12 hidden lg:block">
       <h3 class="font-semibold text-xl text-brand-700">Get connected with us.</h3>
     </div>
@@ -36,12 +36,10 @@ import { Icon } from "astro-icon";
     <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center content-center justify-items-center">
       <!-- Tailwind Elements section -->
       <div class="flex justify-center flex-row items-center">
-          <Icon class="text-brand-600 w-16 h-16" name="bx:bxs-bot" />
-      
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.
-        </p>
+        <img
+          src="/ai_logo.png"
+          alt="Logo"
+          class="object-contain h-32 w-44 mr-2" />
       </div>
       <!-- Useful links section -->
       <div class="flex justify-center flex-col">
@@ -94,7 +92,7 @@ import { Icon } from "astro-icon";
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            class="mr-3 h-5 w-5">
+            class="text-brand-500 mr-3 h-5 w-5">
             <path
               d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
             <path
