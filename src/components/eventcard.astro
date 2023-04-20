@@ -1,8 +1,9 @@
 ---
 import Link from "@components/ui/link.astro";
-
+import { Icon } from "astro-icon";
 
 const { details } = Astro.props;
+console.log(details);
 ---
 
 <div class="flex flex-col justify-between max-w-md gap-10">
@@ -16,6 +17,10 @@ const { details } = Astro.props;
   <div>
     <h2 class="text-4xl font-semibold text-gray-700">{details.title}</h2>
     <p class="text-gray-600 leading-6 mt-2">{details.description}</p>
+  </div>
+  <div class="flex justify-start items-center gap-4">
+    <Icon class="text-brand-600 w-9 h-9" name="mdi:date-range" />
+    <p>{details.date}</p>
   </div>
     {details.link?
         <Link 

@@ -20,7 +20,7 @@ const { details, index } = Astro.props;
       <Icon class="text-brand-600 w-9 h-9" name="mdi:date-range" />
       <p>{details.date}</p>
     </div>
-    <Link href="#" size="md" class={"bg-brand-600 hover:bg-brand w-2/4"}>
+    <Link target="_blank" href={details.link} size="md" class={"bg-brand-600 hover:bg-brand w-2/4"}>
       Watch Now
     </Link>
   </div>

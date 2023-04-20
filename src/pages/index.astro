@@ -5,6 +5,10 @@ import Hero from "@components/homepage/hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Founders from "@components/homepage/founders.astro";
 import HeraldDevcorps from "@components/homepage/heraldDevcorps.astro";
+import DevCorpshead from "@components/team/devCorpshead.astro";
+import Mentor from "@components/team/mentor.astro";
+import Event from "@components/homepage/event.astro";
+
 ---
 
 <Layout title="Home">
@@ -13,5 +17,10 @@ import HeraldDevcorps from "@components/homepage/heraldDevcorps.astro";
     <Features />
     <Founders />
     <HeraldDevcorps />
+    <div class="sm:flex-row flex flex-col m-9 ">
+    <DevCorpshead />
+    <Mentor />
+    </div>
+    <Event />
   </Container>
 </Layout>

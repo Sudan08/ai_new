@@ -5,6 +5,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import Eventcard from "@components/eventcard.astro";
 
+
 const EventDetails = await getCollection("event", ({ data }) => {
   return data;
 });
@@ -23,6 +24,7 @@ const details = filterDate.map((detail) => {
     link: detail.data.link,
   };
 });
+console.log(details);
 ---
 
 <Layout title="Algo">
