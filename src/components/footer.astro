@@ -2,15 +2,24 @@
 import { Icon } from "astro-icon";
 
 ---
+<style>
+  .customBg{
+    background-image: url('/footer2.png');
+    background-position: top;
+    opacity: 50%;
+    background-size: contain;
+  }
+</style>
 
-<footer class="mt-20 mb-10 bg-footerImage max-w-screen-xl mx-auto px-5">
+<footer class="mt-20 max-w-screen-xl mx-auto px-5 relative">
+  <div class="absolute top-0 left-0 customBg h-full w-full -z-[1]"></div>
   <div
     class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between ">
     <div class="mr-12 hidden lg:block">
       <h3 class="font-semibold text-xl text-brand-700">Get connected with us.</h3>
     </div>
     <div class="flex justify-center">
-      <a href="https://www.facebook.com/groups/414464819194468" class="mr-6 text-blue-600 dark:text-neutral-200">
+      <a href="https://www.facebook.com/groups/414464819194468" target="_blank" class="mr-6 text-blue-600 dark:text-neutral-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-8 w-8"
@@ -20,7 +29,7 @@ import { Icon } from "astro-icon";
             d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
         </svg>
       </a>
-      <a href="https://www.instagram.com/devcorps.ai/" class="mr-6 text-pink-600 dark:text-neutral-200">
+      <a href="https://www.instagram.com/devcorps.ai/" target="_blank" class="mr-6 text-pink-600 dark:text-neutral-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-8 w-8"
@@ -106,10 +115,10 @@ import { Icon } from "astro-icon";
   </div>
 
   <div class="flex flex-row gap-5 justify-center">
-  <p class="text-center text-sm text-slate-500">
+  <p class="text-center text-sm text-slate-700">
     Copyright © {new Date().getFullYear()} AI Learners Community. All rights reserved.
   </p>
-  <p class="text-center text-sm text-slate-500">
+  <p class="text-center text-sm text-slate-700">
     Made with ❤️ by Nishant Shrestha and Sudan Shakya.
   </p>
   </div>
