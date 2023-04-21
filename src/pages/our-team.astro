@@ -62,7 +62,7 @@ membersByYear.sort((a, b) => b.year - a.year);
             <h3 class="text-gray-700 font-semibold text-2xl mb-3">
               Batch of {batch.year}
             </h3>
-            <div class="grid md:grid-cols-3 gap-10 max-w-4xl">
+            <div class="grid md:grid-cols-4 gap-10 max-w-4xl">
               {batch.members.map((teamMemberEntry) => (
                 <TeamCard
                   alt={teamMemberEntry.data.avatar.alt}

@@ -9,4 +9,5 @@ Our Presenters Roshan Parajuli and Suman Raj Khanal guided us from the theoretic
 The k-nearest neighbors algorithm (k-NN) is a non-parametric supervised learning method for classification and regression. Also, the output varies on the basis of whether k-NN is used for regression or classification."
 date : "19 Aug 2021"
 src: "/events/algo_talk_v1.jpg"
+link : "https://www.youtube.com/watch?v=Ll_1weqnyFA"
 ---

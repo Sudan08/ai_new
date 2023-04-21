@@ -8,4 +8,5 @@ The Naive Bayes Algorithm is a statistical classification technique that is base
 "
 date: "10 Sep 2021"
 src: "/events/algo_talk_v2.jpg"
+link : " "
 ---

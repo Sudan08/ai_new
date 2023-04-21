@@ -1,6 +1,6 @@
 ---
 import Link from "@components/ui/link.astro";
-
+import { Icon } from "astro-icon";
 
 const { details } = Astro.props;
 ---
@@ -17,12 +17,20 @@ const { details } = Astro.props;
     <h2 class="text-4xl font-semibold text-gray-700">{details.title}</h2>
     <p class="text-gray-600 leading-6 mt-2">{details.description}</p>
   </div>
+  <div class="flex justify-start items-center gap-4">
+    <Icon class="text-brand-600 w-9 h-9" name="mdi:date-range" />
+    <p>{details.date}</p>
+  </div>
     {details.link?
         <Link 
     href={details.link}
     size="lg"
     class="bg-brand-600 border-none outline-none hover:bg-brand">View More</Link>:
-    <p class="text-lg py-2 text-gray-700 font-bold">Only one time event yet.</p>}
+    <Link 
+    disabled
+    href="#"
+    size="lg"
+    class="bg-brand-400 border-none outline-none hover:bg-brand-200">View More</Link>}
 
 </div>
 

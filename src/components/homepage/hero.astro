@@ -13,18 +13,11 @@ const coolParticles: ISourceOptions = {
   fpsLimit: 60,
   fullScreen: {
     enable: true,
-    zIndex: -1,
+    zIndex: -2,
   },
   particles: {
     color: {
       value: "#74c043",
-    },
-    links: {
-      color: "#74c043",
-      distance: 150,
-      enable: true,
-      opacity: 0.5,
-      width: 1,
     },
     collisions: {
       enable: true,
@@ -96,7 +89,6 @@ const coolParticles: ISourceOptions = {
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="/about-us"
-        target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
         Learn More
