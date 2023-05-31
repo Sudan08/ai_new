@@ -8,19 +8,21 @@ import HeraldDevcorps from "@components/homepage/heraldDevcorps.astro";
 import DevCorpshead from "@components/team/devCorpshead.astro";
 import Mentor from "@components/team/mentor.astro";
 import Event from "@components/homepage/event.astro";
+import Insta from "@components/insta.astro";
 
 ---
-
 <Layout title="Home">
   <Container>
     <Hero />
     <Features />
-    <Founders />
+    <Insta />
+    <Event />
     <HeraldDevcorps />
     <div class="sm:flex-row flex flex-col m-9 ">
-    <DevCorpshead />
-    <Mentor />
-    </div>
-    <Event />
+      <DevCorpshead />
+      <Mentor />
+      </div>
+    <Founders />
+
   </Container>
 </Layout>
