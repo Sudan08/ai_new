@@ -1,4 +1,4 @@
----
+  ---
 import { Picture } from "@astrojs/image/components";
 import Link from "@components/ui/link.astro";
 
@@ -7,22 +7,12 @@ import Link from "@components/ui/link.astro";
 
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={"/hero-illustration.png"}
-      alt="Astronaut in the air"
-      widths={[200, 800, 800]}
-      aspectRatio="1:1"
-      sizes="(max-width: 800px) 100vw, 500px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
+  class="grid lg:grid-cols-2 place-items-center h-screen">
+
 
   <div>
     <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter xl:leading-[120%]">
+      class="text-5xl leading-tight lg:text-6xl  xl:text-7xl  font-bold lg:leading-tight lg:tracking-tight xl:tracking-tighter xl:leading-[120%]">
       <span class="text-brand-600">Surrouding</span> and Gathering the
       <br />
       <span class="text-brand-600"> AI Enthusiasts</span>
@@ -40,5 +30,16 @@ import Link from "@components/ui/link.astro";
         Learn More
       </Link>
     </div>
+  </div>
+  <div class="py-6 md:order-1 hidden md:hidden lg:contents lg:order-first md:block">
+    <Picture
+      src={"/hero-illustration.png"}
+      alt="Astronaut in the air"
+      widths={[200, 800, 800]}
+      aspectRatio="1:1"
+      sizes="(max-width: 800px) 100vw, 500px"
+      loading="eager"
+      format="avif"
+    />
   </div>
 </main>
