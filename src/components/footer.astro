@@ -15,7 +15,7 @@ import { Icon } from "astro-icon";
 <footer class="mt-20 mx-auto px-5 relative">
   <div class="absolute top-0 left-0 customBg h-full w-full -z-[1]"></div>
   <div
-    class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between max-w-screen-xl mx-auto">
+    class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between max-w-screen-xl mx-auto sm:justify-start">
     <div class="mr-12 hidden lg:block">
       <h3 class="font-semibold text-xl text-brand-700">Get connected with us.</h3>
     </div>
@@ -42,19 +42,19 @@ import { Icon } from "astro-icon";
       </a>
     </div>
   </div>
-  <div class="mx-6 py-10 text-center md:text-left ">
-    <div class="grid-1 grid  md:grid-cols-2 lg:grid-cols-3 justify-start content-start justify-items-start max-w-fit mx-auto gap-10">
+  <div class="sm:text-left md:text-left mx-6 py-10 text-center  ">
+    <div class="grid-1 grid text-start justify-center md:grid-cols-2 lg:grid-cols-3 justify-start content-start justify-items-start max-w-fit mx-auto gap-10">
       <!-- Tailwind Elements section -->
-      <div class="flex justify-start flex-row items-start">
+      <div class="flex justify-center w-full flex-row items-start md:justify-start">
         <img
           src="/ai_logo.png"
           alt="Logo"
           class="object-contain h-32 w-44 mr-2" />
       </div>
       <!-- Useful links section -->
-      <div class="flex justify-center flex-col text-black w-full text-center">
+      <div class="flex justify-center flex-col text-black w-full text-center ">
         <h6
-          class="mb-4 flex text-center justify-center font-semibold uppercase md:justify-center ">
+          class="mb-4 flex text-center justify-center font-semibold uppercase md:justify-center sm:text-left">
           Useful links
         </h6>
         <p class="mb-4">
@@ -81,7 +81,7 @@ import { Icon } from "astro-icon";
       <!-- Contact section -->
       <div class="flex justify-start flex-col">
         <h6
-          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-center">
           Contact
         </h6>
         <p class="mb-4 flex items-center justify-center md:justify-start">
@@ -97,7 +97,7 @@ import { Icon } from "astro-icon";
           </svg>
           Naxal, Kathmandu , Nepal
         </p>
-        <p class="mb-4 flex items-center justify-center md:justify-start flex-wrap ">
+        <p class="mb-4 flex items-center text-xs justify-center md:justify-start md:text-base ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -117,7 +117,7 @@ import { Icon } from "astro-icon";
 
   
 </footer>
-<div class="flex flex-col gap-2  bg-white justify-center m-3">
+<div class="flex flex-col gap-2  bg-white justify-center m-3 sm:justify-start">
   <p class="text-center text-sm text-slate-700">
     Copyright © {new Date().getFullYear()} AI Learners Community. All rights reserved.
   </p>
