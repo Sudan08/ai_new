@@ -6,7 +6,7 @@ import { Icon } from "astro-icon";
   .customBg{
     background-image: url('/footer2.png');
     background-position: bottom;
-    opacity: 50%;
+    opacity: 45%;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -42,19 +42,19 @@ import { Icon } from "astro-icon";
       </a>
     </div>
   </div>
-  <div class="mx-6 py-10 text-center md:text-left">
-    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center content-center justify-items-center">
+  <div class="mx-6 py-10 text-center md:text-left ">
+    <div class="grid-1 grid  md:grid-cols-2 lg:grid-cols-3 justify-start content-start justify-items-start max-w-fit mx-auto gap-10">
       <!-- Tailwind Elements section -->
-      <div class="flex justify-center flex-row items-center">
+      <div class="flex justify-start flex-row items-start">
         <img
           src="/ai_logo.png"
           alt="Logo"
           class="object-contain h-32 w-44 mr-2" />
       </div>
       <!-- Useful links section -->
-      <div class="flex justify-center flex-col">
+      <div class="flex justify-center flex-col text-black w-full text-center">
         <h6
-          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          class="mb-4 flex text-center justify-center font-semibold uppercase md:justify-center ">
           Useful links
         </h6>
         <p class="mb-4">
@@ -79,7 +79,7 @@ import { Icon } from "astro-icon";
         </p>
       </div>
       <!-- Contact section -->
-      <div class="flex justify-center flex-col">
+      <div class="flex justify-start flex-col">
         <h6
           class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
           Contact
@@ -97,7 +97,7 @@ import { Icon } from "astro-icon";
           </svg>
           Naxal, Kathmandu , Nepal
         </p>
-        <p class="mb-4 flex items-center justify-center md:justify-start">
+        <p class="mb-4 flex items-center justify-center md:justify-start flex-wrap ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -115,7 +115,9 @@ import { Icon } from "astro-icon";
     </div>
   </div>
 
-  <div class="flex flex-col gap-5 justify-center">
+  
+</footer>
+<div class="flex flex-col gap-2  bg-white justify-center m-3">
   <p class="text-center text-sm text-slate-700">
     Copyright © {new Date().getFullYear()} AI Learners Community. All rights reserved.
   </p>
@@ -123,6 +125,5 @@ import { Icon } from "astro-icon";
     Made with ❤️ by Nishant Shrestha and Sudan Shakya.
   </p>
   </div>
-</footer>
 
 
