@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-
+import { Icon } from "astro-icon";
 
 interface Props {
   imageUrl: string;
@@ -34,4 +34,12 @@ const { imageUrl, alt, name, title } = Astro.props;
       {title}
     </h3>
   </div>
+  <div class="flex justify-center items-center">
+    <a href={'#'}>
+    <Icon pack='mdi' name="github" class='h-9 w-9 hover:cursor-pointer' />
+    </a>
+    <a href={'#'}>
+    <Icon pack='mdi' name="linkedin" class='h-9 w-9 hover:cursor-pointer' />
+    </a>
+    </div>
 </div>
