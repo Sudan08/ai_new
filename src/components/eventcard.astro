@@ -23,16 +23,11 @@ const { details } = Astro.props;
     <Icon class="text-brand-600 w-9 h-9" name="mdi:date-range" />
     <p>{details.date}</p>
   </div>
-    {details.link?
         <Link 
     href={details.link}
     size="lg"
-    class="bg-brand-600 border-none outline-none hover:bg-brand">View More</Link>:
-    <Link 
-    disabled
-    href="#"
-    size="lg"
-    class="bg-brand-400 border-none outline-none hover:bg-brand-200">View More</Link>}
+    class="bg-brand-600 border-none outline-none hover:bg-brand">View More</Link>
+
   </div>
   </div>
 </div>
