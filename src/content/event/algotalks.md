@@ -1,7 +1,7 @@
 ---
 draft: false
 index: 3
-link: "/algo"
+link: "/events/algo"
 title: "Algo Talks"
 description: "Platform to talk about exciting algorithms mostly related to Artificial Intelligence."
 date: "Dec 20, 2022"

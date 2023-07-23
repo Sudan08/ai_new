@@ -1,0 +1,59 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+
+import { getCollection } from "astro:content";
+
+
+const EventDetails = await getCollection("event", ({ data }) => {
+  return data;
+});
+
+const details = EventDetails.filter((detail) => {
+  return detail.data.title === 'Code Jam' ?{
+    id: detail.data.index,
+    title: detail.data.title,
+    description: detail.data.description,
+    date: detail.data.date,
+    src: detail.data.src,
+    link: detail.data.link,
+  }: null;
+});
+
+
+
+---
+
+<Layout title="Home">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">
+       <span class="text-brand-600"> {details[0].data.title} </span>
+      </Fragment>
+      <Fragment slot="desc">
+        An event where Students learn the layout of <span
+          class="text-brand-700 font-bold">Coding</span
+        >
+      </Fragment>
+    </Sectionhead> 
+    <div class="m-9">
+      <div
+        class="flex lg:flex-col-reverse justify-around gap-9 md:flex-col-reverse sm:flex-col-reverse">
+        <div class="flex flex-col justify-center align-center w-full">
+          <p class="text-lg text-black">
+            {details[0].data.description}
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src={details[0].data.src}
+            alt="FYP Demo"
+            class="w-2/4 h-2/4 object-cover rounded-md hover:-translate-y-3 duration-300"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>
+
