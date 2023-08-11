@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Sweekar Bajimaya"
-title: "AI Learner, UI/UX Designer"
+title: "AI Learner"
 year: 2023
 avatar: {
     src: "/members/sweekar.jpg",

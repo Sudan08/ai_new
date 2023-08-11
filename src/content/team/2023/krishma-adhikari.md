@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Krishma Adhikari"
-title: "AI Learner, UI/UX Designer"
+title: "UI/UX Designer"
 year: 2023
 avatar: {
     src: "/members/krishma.jpg",

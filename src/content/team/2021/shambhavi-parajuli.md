@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Shambhavi Parajuli"
-title: "UI/UX Ethusiasts, Digital Creator"
+title: "Digital Creator"
 year: 2021
 avatar: {
     src: "/members/shambhavi.jpg",
