@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Subina Shrestha"
-title: "AI Learner, Management Team"
+title: "Management Team"
 year: 2021
 avatar: {
     src: "/members/subina.jpg",

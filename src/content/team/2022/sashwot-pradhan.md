@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Sashwot Pradhan"
-title: "AI Learner, Front-end developer"
+title: "AI Learner"
 year: 2022
 avatar: {
     src: "/members/shashwot.jpg",
