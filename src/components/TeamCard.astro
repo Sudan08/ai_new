@@ -7,8 +7,10 @@ interface Props {
   alt: string;
   name: string;
   title: string;
+  githubURL : string;
+  linkedinURL : string;  
 }
-const { imageUrl, alt, name, title } = Astro.props;
+const { imageUrl, alt, name, title , githubURL , linkedinURL } = Astro.props;
 ---
 
 <div class="group">
@@ -35,11 +37,11 @@ const { imageUrl, alt, name, title } = Astro.props;
     </h3>
   </div>
   <div class="flex justify-center items-center">
-    <a href={'#'}>
-    <Icon pack='mdi' name="github" class='h-9 w-9 hover:cursor-pointer' />
+    <a href={githubURL} target="_blank">
+    <Icon pack='mdi' name="github" class='h-9 w-9 hover:cursor-pointer opacity-50 hover:opacity-100 transition-all duration-500  hover:bg-blend-overlay' />
     </a>
-    <a href={'#'}>
-    <Icon pack='mdi' name="linkedin" class='h-9 w-9 hover:cursor-pointer' />
+    <a href={linkedinURL} target="_blank">
+    <Icon pack='mdi' name="linkedin" class='h-9 w-9  hover:cursor-pointer opacity-50 hover:opacity-100 hover:text-cyan-600 transition-all duration-500  hover:bg-blend-overlay' />
     </a>
     </div>
 </div>

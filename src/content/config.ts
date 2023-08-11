@@ -53,6 +53,8 @@ const teamCollection = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
+    githubURL : z.string().optional() || z.undefined(),
+    linkedinURL : z.string().optional() || z.undefined(),
     year: z.number(),
     publishDate: z.string().transform(str => new Date(str)),
   }),

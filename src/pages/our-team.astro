@@ -46,7 +46,7 @@ membersByYear.sort((a, b) => b.year - a.year);
         </p>
       </Fragment>
     </Sectionhead>
-    <div class="flex flex-row gap-6">
+    <div class="flex-col flex md:flex-row gap-6">
     <DevCorpshead />
     <Mentor />
     </div>
@@ -69,6 +69,8 @@ membersByYear.sort((a, b) => b.year - a.year);
                   imageUrl={teamMemberEntry.data.avatar.src}
                   name={teamMemberEntry.data.name}
                   title={teamMemberEntry.data.title}
+                  githubURL={teamMemberEntry.data.githubURL || "#"}
+                  linkedinURL={teamMemberEntry.data.linkedinURL || "#"}
                 />
               ))}
             </div>
