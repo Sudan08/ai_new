@@ -69,6 +69,8 @@ membersByYear.sort((a, b) => b.year - a.year);
                   imageUrl={teamMemberEntry.data.avatar.src}
                   name={teamMemberEntry.data.name}
                   title={teamMemberEntry.data.title}
+                  githubURL={teamMemberEntry.data.githubURL || "#"}
+                  linkedinURL={teamMemberEntry.data.linkedinURL || "#"}
                 />
               ))}
             </div>
