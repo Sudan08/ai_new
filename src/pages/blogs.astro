@@ -25,6 +25,7 @@ publishedBlogEntries.sort(function (a, b) {
     width: 10rem;
     height: 10rem;
     border-radius: 0.5rem;
+    flex-shrink: 0;
   }
 </style>
 
@@ -34,7 +35,7 @@ publishedBlogEntries.sort(function (a, b) {
       <Fragment slot="title">Blog by Learners</Fragment>
       <Fragment slot="desc">Sharing and Learning Resources</Fragment>
     </Sectionhead>
-    <main class="mt-16 justify-center flex flex-row">
+    <main class="mt-16 justify-center flex flex-row items-center">
       <div class="blogImg"></div>
       <div class="flex flex-col justify-start p-6 gap-5">
         <p class= "text-slate-500 leading-relaxed">All About Next.js Pre-rendering and Data Fetching via SSR and SSG</p>
